@@ -1,12 +1,40 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>トップページ</title>
-</head>
-<body>
-    <h1>トップページ</h1>
-</body>
-</html>
+@extends('common/layout')
+@extends('common/header') 
+@extends('common/footer') 
+@section('top')
+<div class="top-slide-img">
+    <div class="row">
+        <div class="col-2 text-center">
+            left slide button
+        </div>
+        <div class="col-8 text-center">
+            <img src="{{ asset('img/toy.png')}}" class="w-50">
+        </div>
+        <div class="col-2 text-center">
+            right slide button
+        </div>
+    </div>
+</div>
+<div class="recommend-goods">
+    <div class="sub-heading row">
+        <div class="h5">おすすめ</div>
+    </div>
+    <div class="row justify-content-between">
+        <div class="col-3">
+            <a href="https://google.com">
+                <img src="{{ asset('img/toy.png')}}" class="img-fluid">
+            </a>
+        </div>
+        <div class="col-3">
+            <a href="https://google.com">
+                <img src="{{ asset('img/toy.png')}}" class="img-fluid">
+            </a>
+        </div>
+        <div class="col-3">
+            <a href="https://google.com">
+                <img src="{{ asset('img/toy.png')}}" class="img-fluid">
+            </a>
+        </div>
+    </div>
+</div>
+@endsection('top')
