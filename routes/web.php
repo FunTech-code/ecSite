@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',     'TopPageController@index');
+Route::get('user',  'UserController@index');
+Route::get('order', 'OrderController@index');
+Route::get('goods', 'GoodsController@index');
