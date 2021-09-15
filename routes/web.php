@@ -15,6 +15,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',     'TopPageController@index');
 Route::get('user',  'UserController@index');
-Route::get('user/{id}',  'UserController@show');
+Route::match(['get', 'post'],'user/show', 'UserController@show');
+Route::get('login', function () {
+    return view('login.login');
+});
+Route::get('login/signup', function () {
+    return view('login.signup');
+});
+Route::get('login/{id}',  'UserController@create');
 Route::get('order', 'OrderController@index');
 Route::get('goods', 'GoodsController@index');

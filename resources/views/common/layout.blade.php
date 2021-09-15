@@ -16,6 +16,7 @@
 @yield('header')
     <div>
         @yield('top')
+        @yield('login')
     </div>
 @yield('footer')
 </body>

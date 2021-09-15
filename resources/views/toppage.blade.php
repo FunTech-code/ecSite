@@ -2,6 +2,10 @@
 @extends('common/header') 
 @extends('common/footer') 
 @section('top')
+@if (!empty($user))
+<h4>user:{{ $user }}
+@endif
+</h4>
 <div class="top-slide-img">
     <div class="row">
         <div class="col-2 align-self-center text-center">
