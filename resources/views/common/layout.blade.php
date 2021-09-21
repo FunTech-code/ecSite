@@ -18,6 +18,7 @@
         @yield('top')
         @yield('login')
         @yield('signup')
+        @yield('goods-list')
     </div>
 @yield('footer')
 </body>
