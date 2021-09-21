@@ -1,4 +1,22 @@
 @charset "utf-8";
+.header-contents {
+    border-bottom: solid 2px #C4C4C4;
+}
 .nav-icon {
     color : inherit;
+}
+
+.login-page .page-heading {
+    border-bottom: solid 2px #C4C4C4;
+}
+.login-page .signin-form,
+.login-page .signup-form{
+    height: 13em;
+    max-height: 200px;
+    background-color: #C4C4C4;
+}
+.login-button > input,
+.signup-button > input {
+    background-color: black;
+    color: #ffffff;
 }

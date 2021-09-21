@@ -1,6 +1,6 @@
 @section('header')
 <header>
-<div class="header-contents border-bottom border-dark">
+<div class="header-contents mb-3">
     <div class="row mt-4">
         <div class="col-12">
             <h1 class="text-center">Funtech</h1>
