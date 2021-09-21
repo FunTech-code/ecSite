@@ -6,6 +6,7 @@
     color : inherit;
 }
 
+/*.ログインページ */
 .login-page .page-heading {
     border-bottom: solid 2px #C4C4C4;
 }
@@ -17,6 +18,16 @@
 }
 .login-button > input,
 .signup-button > input {
+    background-color: black;
+    color: #ffffff;
+}
+
+/*.会員登録ページ */
+.signin-form .input-column {
+    background-color: #C4C4C4;
+}
+
+.button-wrap .button-outer .submit-button {
     background-color: black;
     color: #ffffff;
 }
