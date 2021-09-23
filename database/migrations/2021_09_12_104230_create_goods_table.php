@@ -14,12 +14,12 @@ class CreateGoodsTable extends Migration
     public function up()
     {
         Schema::create('goods', function (Blueprint $table) {
-            $table->id('goods_id');
+            $table->increments('goods_id');
             $table->string('goods_name')->unique();
             $table->string('price');
-            $table->string('image_url')->nullable();
-            $table->integer('stock')->nullable();
-            $table->string('goods_description')->nullable();
+            $table->string('image_url')->nullable(); // 画像URL
+            $table->integer('stock')->nullable(); // 在庫
+            $table->string('goods_description')->nullable(); // 商品説明
             $table->string('created_user')->nullable();
             $table->string('updated_user')->nullable();
             $table->timestamps();
