@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',     'TopPageController@index');
+Route::get('/',     'TopPageController@index'); // トップページ
 Route::get('user',  'UserController@index');
-Route::match(['get', 'post'],'user/show', 'UserController@show');
+Route::match(['get', 'post'],'user/show', 'UserController@show'); // ユーザー登録
 Route::get('login', function () {
     return view('login.login');
 });
@@ -23,5 +23,7 @@ Route::get('login/signup', function () {
     return view('login.signup');
 });
 Route::get('login/{id}',  'UserController@create');
-Route::get('order', 'OrderController@index');
-Route::get('goods', 'GoodsController@index');
+Route::get('goods', 'GoodsController@index'); // 商品一覧
+Route::get('goods/{id}', 'GoodsController@show'); // 商品詳細
+Route::get('order/{id}', 'OrderController@buy'); // 商品購入
+Route::get('order/received/{id}', 'OrderController@received'); // 購入完了
