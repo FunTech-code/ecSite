@@ -12,7 +12,7 @@ class UserTableSeeder extends Seeder
     public function run()
     {
          // データのクリア
-        DB::table('user')->truncate();
+        DB::table('users')->truncate();
     
         // データ挿入
         $param = [
@@ -26,7 +26,7 @@ class UserTableSeeder extends Seeder
             'created_user' => 'admin',
             'updated_user' => 'admin',
         ];
-        DB::table('user')->insert($param);
+        DB::table('users')->insert($param);
 
         $param = [
             'user_name' => '秋田',
@@ -39,7 +39,7 @@ class UserTableSeeder extends Seeder
             'created_user' => 'admin',
             'updated_user' => 'admin',
         ];
-        DB::table('user')->insert($param);
+        DB::table('users')->insert($param);
 
         $param = [
             'user_name' => '岩手',
@@ -52,7 +52,7 @@ class UserTableSeeder extends Seeder
             'created_user' => 'admin',
             'updated_user' => 'admin',
         ];
-        DB::table('user')->insert($param);
+        DB::table('users')->insert($param);
 
         $param = [
             'user_name' => '宮城',
@@ -65,7 +65,7 @@ class UserTableSeeder extends Seeder
             'created_user' => 'admin',
             'updated_user' => 'admin',
         ];
-        DB::table('user')->insert($param);
+        DB::table('users')->insert($param);
 
         $param = [
             'user_name' => '山形',
@@ -78,7 +78,7 @@ class UserTableSeeder extends Seeder
             'created_user' => 'admin',
             'updated_user' => 'admin',
         ];
-        DB::table('user')->insert($param);
+        DB::table('users')->insert($param);
 
         $param = [
             'user_name' => '福島',
@@ -91,6 +91,6 @@ class UserTableSeeder extends Seeder
             'created_user' => 'admin',
             'updated_user' => 'admin',
         ];
-        DB::table('user')->insert($param);
+        DB::table('users')->insert($param);
     }
 }

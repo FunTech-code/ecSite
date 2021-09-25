@@ -1,12 +1,17 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>userindex</title>
-</head>
-<body>
-    <h1>userコントローラーインデックス</h1>
-</body>
-</html>
+@extends('common/layout')
+@extends('common/header') 
+@extends('common/footer') 
+@section('login')
+<div class="login-page">
+    <div class="page-heading pb-2 mb-5">
+        <h4>ログイン</h4>
+    </div>
+    @if (Auth::check())
+    <p>USER: {{ $user->name . ' (' . $user->email . ')' }}</p>
+    @else
+    <p>※ログインしていません。(<a href="/login">ログイン</a>|
+        <a href="/register">登録</a>)</p>
+    @endif
+
+</div><!-- ./login-page -->
+@endsection('login')
