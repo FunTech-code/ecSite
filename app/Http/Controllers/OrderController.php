@@ -2,84 +2,74 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use App\Goods;
+use App\Order;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-        return view('order/index');
-    }
-
-    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function buy(Request $request, $goods_id)
     {
-        //
+        // 購入処理
+        // 発注
+        $order = new Order;
+        // $order->user_id = $request->user_id;
+        $order->user_id = 1;
+        $order->goods_id = $goods_id;
+        $order->purchase_number = $request->input('purchase_number');
+        $order->save();
+
+        // 在庫処理
+        // $item = Goods::find(1);
+        $item = Goods::where('goods_id',$goods_id)->first();
+        $calc_stock = $item->stock - $request->input('purchase_number');
+        $item->stock = $calc_stock;
+        $item->save();
+        
+        // $user = User::where('user_id',$request->input('login_id', 1))->first();
+        $user = User::find(1);
+        $item = Goods::where('goods_id',$goods_id)->first();
+        return view('order/complete', ['user' => $user,'item' => $item]);
     }
+    // public function buy(Request $request, $goods_id)
+    // {
+    //     // 購入処理
+    //     // 発注
+    //     $order = new Order;
+    //     // $order->user_id = $request->user_id;
+    //     $order->user_id = 1;
+    //     $order->goods_id = $request->goods_id;
+    //     $order->purchase_number = $request->purchase_number;
+    //     $order->save();
+
+    //     // 在庫処理
+    //     // $item = Goods::find(1);
+    //     $item = Goods::where('goods_id',$id)->first();
+    //     $calc_stock = $item->stock - $request->purchase_number;
+    //     $item->stock = $calc_stock;
+    //     $item->save();
+        
+    //     $user = User::where('user_id',$request->input('login_id', 1))->first();
+    //     $item = Goods::where('goods_id',$id)->first();
+    //     return view('order/index', ['item' => $item]);
+    // }
 
     /**
-     * Store a newly created resource in storage.
+     * Display a listing of the resource.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function complete(Request $request)
     {
         //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        $user = User::where('user_id',$request->input('login_id', 1))->first();
+        $item = Goods::where('goods_id',$id)->first();
+        return view('order/complete', [ 'user' => $user,'item' => $item ]);
     }
 }

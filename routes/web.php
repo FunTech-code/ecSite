@@ -25,5 +25,5 @@ Route::get('login/signup', function () {
 Route::get('login/{id}',  'UserController@create');
 Route::get('goods', 'GoodsController@index'); // 商品一覧
 Route::get('goods/{id}', 'GoodsController@show'); // 商品詳細
-Route::get('order/{id}', 'OrderController@buy'); // 商品購入
-Route::get('order/received/{id}', 'OrderController@received'); // 購入完了
+Route::post('order/{id}', 'OrderController@buy'); // 商品購入
+Route::get('order/complete/{goods_id}', 'OrderController@complete'); // 購入完了

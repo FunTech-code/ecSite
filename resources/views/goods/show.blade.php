@@ -16,7 +16,8 @@
             <img src="{{ asset($item->image_url)}}" class="img-fluid h-100">
         </div>
 
-        <form action="/order/{id}" method="post" class="col-6 goods-info">
+        <form action="/order/{{$item->goods_id}}" method="post" class="col-6 goods-info">
+            @csrf
             <h3 class="goods-name">{{$item->goods_name}}</h3>
             <p class="goods-code">商品コード：ABC{{$item->goods_id}}</p>
             <div class="row">
@@ -26,7 +27,7 @@
                 </div>
                 <div class="col-6">
                     <label class="goods-price-label mr-2">個数：</label>
-                    <input class="w-50" name="purchese-number" type="number" placeholder="0">
+                    <input class="w-50" name="purchase_number" type="number" placeholder="0">
                 </div>
             </div><!-- ./row -->
             <div class="stock-info-wrap">
