@@ -18,13 +18,18 @@ class UserController extends Controller
 
     public function show(Request $request)
     {
-        $request->flash();
+        $email = $request->input('email');
+        $password = $request->input('password');
+        if (Auth::attempt(['email' => $email, 'password' => $password, 'active' => 1])) {
+            $msg = 'ログイン成功(' . Auth::user()->name . ')';
+        } else {
+            $msg = 'ログイン失敗';
+        }
+        return view('user.show',['message' => $msg]);
 
-        $id = $request->input('login_id', 1);
-        // $password = $request->input('login_pass');
 
-        $username = DB::table('user')->where('user_id', $id)->value('user_name');
-        return view('toppage',['user' => $username]);
+        // $username = DB::table('user')->where('user_id', $id)->value('user_name');
+        // return view('toppage',['user' => $username]);
     }
     
     

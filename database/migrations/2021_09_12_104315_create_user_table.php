@@ -17,7 +17,7 @@ class CreateUserTable extends Migration
             $table->id();
             // $table->increments('user_id');
             $table->string('name')->unique();
-            $table->string('user_name_kana')->nullable();
+            $table->string('name_kana')->nullable();
             $table->string('email')->unique()->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->integer('tell');

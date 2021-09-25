@@ -8,6 +8,6 @@
 </head>
 <body>
     <h1>userコントローラーshow</h1>
-    <p>{{ $user }}</p>
+    <p>{{ $msg }}</p>
 </body>
 </html>

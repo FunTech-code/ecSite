@@ -16,8 +16,8 @@ class UserTableSeeder extends Seeder
     
         // データ挿入
         $param = [
-            'user_name' => '青森',
-            'user_name_kana' => 'アオモリ',
+            'name' => '青森',
+            'name_kana' => 'アオモリ',
             'email' => 'aomori@gmail.com',
             'tell' => '00011112222',
             'postal_code' => '111-2222',
@@ -29,8 +29,8 @@ class UserTableSeeder extends Seeder
         DB::table('users')->insert($param);
 
         $param = [
-            'user_name' => '秋田',
-            'user_name_kana' => 'アキタ',
+            'name' => '秋田',
+            'name_kana' => 'アキタ',
             'email' => 'akita@gmail.com',
             'tell' => '00011123333',
             'postal_code' => '112-2222',
@@ -42,8 +42,8 @@ class UserTableSeeder extends Seeder
         DB::table('users')->insert($param);
 
         $param = [
-            'user_name' => '岩手',
-            'user_name_kana' => 'イワテ',
+            'name' => '岩手',
+            'name_kana' => 'イワテ',
             'email' => 'iwate@gmail.com',
             'tell' => '00011132222',
             'postal_code' => '113-2222',
@@ -55,8 +55,8 @@ class UserTableSeeder extends Seeder
         DB::table('users')->insert($param);
 
         $param = [
-            'user_name' => '宮城',
-            'user_name_kana' => 'ミヤギ',
+            'name' => '宮城',
+            'name_kana' => 'ミヤギ',
             'email' => 'miyagi@gmail.com',
             'tell' => '00011156666',
             'postal_code' => '115-2222',
@@ -68,8 +68,8 @@ class UserTableSeeder extends Seeder
         DB::table('users')->insert($param);
 
         $param = [
-            'user_name' => '山形',
-            'user_name_kana' => 'ヤマガタ',
+            'name' => '山形',
+            'name_kana' => 'ヤマガタ',
             'email' => 'yamagata@gmail.com',
             'tell' => '00011167777',
             'postal_code' => '116-2222',
@@ -81,8 +81,8 @@ class UserTableSeeder extends Seeder
         DB::table('users')->insert($param);
 
         $param = [
-            'user_name' => '福島',
-            'user_name_kana' => 'フクシマ',
+            'name' => '福島',
+            'name_kana' => 'フクシマ',
             'email' => 'fukushima@gmail.com',
             'tell' => '00011189999',
             'postal_code' => '116-2222',
