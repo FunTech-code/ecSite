@@ -22,7 +22,9 @@ class CreateUserTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->integer('tell');
             $table->string('postal_code')->nullable();
-            $table->string('address');
+            $table->string('prefectures');
+            $table->string('municipalities');
+            $table->string('address_details');
             $table->string('password');
             $table->string('created_user')->nullable();
             $table->string('updated_user')->nullable();
