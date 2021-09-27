@@ -9,7 +9,7 @@ class GoodsController extends Controller
 {
     public function index()
     {
-        $items = Goods::all();
+        $items = Goods::paginate(3);
         return view('goods/index', [ 'items' => $items ]);
     }
 

@@ -69,5 +69,49 @@ class GoodsTableSeeder extends Seeder
             'updated_user' => 'admin',
         ];
         DB::table('goods')->insert($param);
+
+        $param = [
+            'goods_name' => 'ブルック',
+            'price' => '¥5,000',
+            'image_url' => 'img/brook.png',
+            'stock' => 100,
+            'goods_description' => 'ブルックのおもちゃです',
+            'created_user' => 'admin',
+            'updated_user' => 'admin',
+        ];
+        DB::table('goods')->insert($param);
+
+        $param = [
+            'goods_name' => 'フランキー',
+            'price' => '¥5,000',
+            'image_url' => 'img/franky.png',
+            'stock' => 100,
+            'goods_description' => 'フランキーのおもちゃです',
+            'created_user' => 'admin',
+            'updated_user' => 'admin',
+        ];
+        DB::table('goods')->insert($param);
+
+        $param = [
+            'goods_name' => 'ジンベエ',
+            'price' => '¥5,000',
+            'image_url' => 'img/jinbe.png',
+            'stock' => 100,
+            'goods_description' => 'ジンベエのおもちゃです',
+            'created_user' => 'admin',
+            'updated_user' => 'admin',
+        ];
+        DB::table('goods')->insert($param);
+
+        $param = [
+            'goods_name' => 'ロビン',
+            'price' => '¥5,000',
+            'image_url' => 'img/robin.png',
+            'stock' => 100,
+            'goods_description' => 'ロビンのおもちゃです',
+            'created_user' => 'admin',
+            'updated_user' => 'admin',
+        ];
+        DB::table('goods')->insert($param);
     }
 }

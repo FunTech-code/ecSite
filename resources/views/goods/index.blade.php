@@ -23,5 +23,6 @@
         </div>
         @endforeach
     </div><!-- ./goods-list -->
+    {{ $items->links() }}
 </div><!-- ./goods-list-page -->
 @endsection('goods-list')
