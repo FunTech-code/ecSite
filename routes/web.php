@@ -22,4 +22,5 @@ Route::get('order/complete/{goods_id}', 'OrderController@complete'); // 購入�
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('user',  'UserController@index');
-// Route::get('user/show',  'UserController@show');
+Route::get('user/show',  'UserController@show');
+Route::get('logout',  'UserController@logout');

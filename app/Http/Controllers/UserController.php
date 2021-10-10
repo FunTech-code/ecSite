@@ -20,12 +20,12 @@ class UserController extends Controller
     {
         $email = $request->input('email');
         $password = $request->input('password');
-        if (Auth::attempt(['email' => $email, 'password' => $password, 'active' => 1])) {
+        if (Auth::attempt(['email' => $email, 'password' => $password], $remember)) {
             $msg = 'ログイン成功(' . Auth::user()->name . ')';
         } else {
             $msg = 'ログイン失敗';
         }
-        return view('user.show',['message' => $msg]);
+        return view('user.show',['msg' => $msg]);
 
 
         // $username = DB::table('user')->where('user_id', $id)->value('user_name');
@@ -55,5 +55,11 @@ class UserController extends Controller
             $msg = 'ログイン失敗';
         }
         return view('user.auth',['message' => $msg]);
+    }
+    
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        return route('login');
     }
 }
