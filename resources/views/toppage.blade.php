@@ -7,18 +7,30 @@
 @endif
 </h4>
 <div class="top-slide-img">
-    <div class="row">
-        <div class="col-2 align-self-center text-center">
-            <i class="far fa-caret-square-left fa-6x"></i>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner text-center">
+            <div class="carousel-item active">
+                <img class="d-block w-50" src="{{ asset('img/nami.png')}}" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-50" src="{{ asset('img/luffy.png')}}" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-50" src="{{ asset('img/toy.png')}}" alt="First slide">
+            </div>
         </div>
-        <div class="col-8 text-center text-center">
-            <img src="{{ asset('img/toy.png')}}" class="w-50">
-        </div>
-        <div class="col-2 align-self-center text-center">
-            <i class="far fa-caret-square-right fa-6x"></i>
-        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
 </div>
+
+
 <div class="recommend-goods">
     <div class="sub-heading row">
         <div class="h5">おすすめ</div>

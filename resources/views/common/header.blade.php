@@ -3,7 +3,7 @@
 <div class="header-contents mb-3">
     <div class="row mt-4">
         <div class="col-12">
-            <h1 class="text-center">Funtech</h1>
+            <h1 class="text-center"><a href="/">Funtech</a></h1>
         </div>
     </div>
     <div class="row">
