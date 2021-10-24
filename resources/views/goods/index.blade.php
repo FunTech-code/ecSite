@@ -1,7 +1,7 @@
 @extends('common/layout')
 @extends('common/header') 
 @extends('common/footer') 
-@section('goods-list')
+@section('contents')
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">Top</a></li>
@@ -25,4 +25,4 @@
     </div><!-- ./goods-list -->
     {{ $items->links() }}
 </div><!-- ./goods-list-page -->
-@endsection('goods-list')
+@endsection('contents')

@@ -1,7 +1,7 @@
 @extends('common/layout')
 @extends('common/header') 
 @extends('common/footer') 
-@section('signup')
+@section('contents')
 <div class="signup-page">
     <div class="page-heading pb-2 mb-5">
         <h4>会員登録</h4>
@@ -75,4 +75,4 @@
         </div><!-- ./col-10 -->
     </div><!-- ./row -->
 </div><!-- ./signup-page -->
-@endsection('signup')
+@endsection('contents')

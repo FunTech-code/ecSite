@@ -13,14 +13,15 @@
 </head>
 
 <body class="container">
+@if (Auth::check())
+<p>ログイン中</p>
+@else
+<p>※ログインしていません。(<a href="/login">ログイン</a>|
+<a href="/register">登録</a>)</p>
+@endif
 @yield('header')
     <div>
-        @yield('top')
-        @yield('login')
-        @yield('signup')
-        @yield('goods-list')
-        @yield('goods-detail')
-        @yield('bought-goods')
+        @yield('contents')
     </div>
 @yield('footer')
 </body>

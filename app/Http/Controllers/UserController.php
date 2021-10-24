@@ -20,7 +20,7 @@ class UserController extends Controller
     {
         $email = $request->input('email');
         $password = $request->input('password');
-        if (Auth::attempt(['email' => $email, 'password' => $password], $remember)) {
+        if (Auth::attempt(['email' => $email, 'password' => $password])) {
             $msg = 'ログイン成功(' . Auth::user()->name . ')';
         } else {
             $msg = 'ログイン失敗';

@@ -1,22 +1,19 @@
-@extends('common/layout')
+@extends('layouts.app')
 @extends('common/header') 
 @extends('common/footer') 
-@section('top')
-@if (!empty($user))
-<h4>user:{{ $user }}
-@endif
-</h4>
+
+@section('content')
 <div class="top-slide-img">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner text-center">
+        <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-50" src="{{ asset('img/nami.png')}}" alt="First slide">
+                <img class="mx-auto d-block w-50" src="{{ asset('img/nami.png')}}" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-50" src="{{ asset('img/luffy.png')}}" alt="First slide">
+                <img class="mx-auto d-block w-50" src="{{ asset('img/luffy.png')}}" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-50" src="{{ asset('img/toy.png')}}" alt="First slide">
+                <img class="mx-auto d-block w-50" src="{{ asset('img/toy.png')}}" alt="First slide">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -50,4 +47,4 @@
     @endforeach
     </div><!-- ./justify-content-between -->
 </div>
-@endsection('top')
+@endsection('content')

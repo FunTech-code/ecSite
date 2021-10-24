@@ -1,7 +1,7 @@
 @extends('common/layout')
 @extends('common/header') 
 @extends('common/footer') 
-@section('login')
+@section('content')
 <div class="login-page">
     <div class="page-heading pb-2 mb-5">
         <h4>ログイン</h4>
@@ -14,4 +14,4 @@
     @endif
 
 </div><!-- ./login-page -->
-@endsection('login')
+@endsection('content')

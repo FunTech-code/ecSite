@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Goods;
 use App\Order;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -18,9 +19,12 @@ class OrderController extends Controller
     {
         // 購入処理
         // 発注
+        // 現在認証されているユーザーの取得
+        $user = Auth::user();
+
         $order = new Order;
         // $order->user_id = $request->user_id;
-        $order->user_id = 1;
+        $order->user_id = $user->id;
         $order->goods_id = $goods_id;
         $order->purchase_number = $request->input('purchase_number');
         $order->save();
@@ -33,7 +37,7 @@ class OrderController extends Controller
         $item->save();
         
         // $user = User::where('user_id',$request->input('login_id', 1))->first();
-        $user = User::find(1);
+        // $user = User::find(1);
         $item = Goods::where('goods_id',$goods_id)->first();
         return view('order/complete', ['user' => $user,'item' => $item]);
     }

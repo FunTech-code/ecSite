@@ -37,4 +37,12 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+    
+    // /**
+    //  * ログアウトしたときの画面遷移先
+    //  */
+    // protected function loggedOut(Request $request)
+    // {
+    //     return redirect('/');
+    // }
 }
