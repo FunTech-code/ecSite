@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @extends('common/header') 
 @extends('common/footer') 
-@section('contents')
+@section('content')
 <div class="bought-goods-page">
     <div class="page-heading pb-2 mb-5">
         <h4>購入完了</h4>
@@ -50,4 +50,4 @@
         </section><!-- ./goods-info -->
     </div><!-- ./bought-goods -->
 </div><!-- ./bought-goods-page -->
-@endsection('contents')
+@endsection('content')

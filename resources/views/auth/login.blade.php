@@ -1,9 +1,11 @@
 @extends('layouts.app')
+@extends('common/header') 
+@extends('common/footer') 
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-6">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 
@@ -65,6 +67,22 @@
                             </div>
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">{{ __('New User') }}</div>
+                <div class="card-body">
+                    <div class="col-form-label text-md-right">{{ __('New User Info') }}</div>
+                    <div class="form-group row mb-0">
+                        <div class="col-md-4 offset-md-4">
+                            <a class="btn btn-primary nav-link" href="{{ route('register') }}">
+                                {{ __('New Create User') }}
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

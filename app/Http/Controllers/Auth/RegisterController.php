@@ -70,7 +70,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'name_kana' => $data['name_kana'],
             'email' => $data['email'],
-            'tell' => "00011112222",
+            'tell' => $data['tell'],
             'postal_code' => $data['postal_code'],
             'prefectures' => $data['prefectures'],
             'municipalities' => $data['municipalities'],
