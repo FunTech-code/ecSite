@@ -4,6 +4,7 @@
 
 @section('content')
 <div class="container">
+    <div class="row page-title-border h4 pl-5 pb-3">ログイン</div>
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card bg-light-grey">
