@@ -1,6 +1,8 @@
 {
 "Login": "ログイン",
+"Logout": "ログアウト",
 "Register": "新規登録",
+"Registered User": "会員のお客様",
 "Forgot Your Password?": "パスワードを忘れた場合",
 "Reset Password": "パスワード再設定",
 "Send Password Reset Link":  "パスワード再設定URLを送信",
@@ -10,8 +12,8 @@
 "New User Info": "初めてご利用のお客様はコチラから会員登録\nをお願いいたします。",
 
 "Name": "お名前",
-"E-Mail Address": "メールアドレス",
-"Password": "パスワード",
+"E-Mail Address": "ID",
+"Password": "Passwords",
 "Confirm Password": "パスワード(確認用)",
 "Remember Me": "ログイン状態を保存",
 

@@ -3,24 +3,26 @@
 @extends('common/footer') 
 
 @section('content')
-<div class="top-slide-img">
+<div class="top-slide-img w-75 mx-auto">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="mx-auto d-block w-50" src="{{ asset('img/nami.png')}}" alt="First slide">
-            </div>
-            <div class="carousel-item">
-                <img class="mx-auto d-block w-50" src="{{ asset('img/luffy.png')}}" alt="First slide">
-            </div>
-            <div class="carousel-item">
-                <img class="mx-auto d-block w-50" src="{{ asset('img/toy.png')}}" alt="First slide">
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <a class="carousel-control-prev bg-secondary" href="#carouselExampleControls" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <div class="carousel-inner border border-goods">
+            <div class="carousel-item active">
+                <a class="show-goods-1" href="/goods/3">
+                    <img class="img-fluid mx-auto d-block w-40 mh-100" src="{{ asset('img/nami.png')}}" alt="First slide">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <img class="img-fluid mx-auto d-block w-40 mh-100" src="{{ asset('img/luffy.png')}}" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="img-fluid mx-auto d-block w-40 mh-100" src="{{ asset('img/sanji.png')}}" alt="Third slide">
+            </div>
+        </div>
+        <a class="carousel-control-next bg-secondary" href="#carouselExampleControls" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>

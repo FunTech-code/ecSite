@@ -4,7 +4,7 @@
 @section('contents')
 <div class="login-page">
     <div class="page-heading pb-2 mb-5">
-        <h4>ログイン</h4>
+        <h4>ログインa</h4>
     </div>
     <div class="row">
         <div class="col-6 text-center">

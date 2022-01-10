@@ -9,18 +9,24 @@
     <div class="row">
         <div class="col-10"></div>
         <div class="col-2">
-            <div class="d-flex justify-content-end">
-                <div class="icon-user mr-2">
-                    <a class="nav-icon" href="/goods">
-                        <i class="fas fa-shopping-basket fa-2x"></i>
+            <ul class="navbar-nav ml-auto">
+                <!-- Authentication Links -->
+                @guest
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    </li>
+                @else
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                                     document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
                     </a>
-                </div>
-                <div class="icon-backet">
-                    <a class="nav-icon mr-2" href="/user/1">
-                        <i class="fas fa-user fa-2x"></i>
-                    </a>
-                </div>
-            </div>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                @endguest
+            </ul>
         </div>
     </div>
 </div>
