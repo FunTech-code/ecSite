@@ -12,6 +12,9 @@ a:hover{
 }
 
 /*.ログインページ */
+.page-title-border {
+    border-bottom: solid 2px #C4C4C4;
+}
 .bg-light-grey {
     background-color: #C4C4C4;
 }
