@@ -3,17 +3,14 @@
 @extends('common/footer') 
 @section('content')
 <div class="bought-goods-page">
-    <div class="page-heading pb-2 mb-5">
+    <div class="page-heading pb-2 mb-5 page-title-border ">
         <h4>購入完了</h4>
     </div>
-    <div class="bought-msg text-left">
+    <div class="bought-msg text-left mb-5">
         <h4>ご購入ありがとうございました。</h4>
-        <aside>
-            <p>購入情報をアドレスにメールでお送りしました。ご確認ください。</p>
-        </aside>
     </div>
     <div class="row justify-content-around bought-goods">
-        <section class="addressee col-6 border border-goods">
+        <section class="addressee col-7">
             <h5 class="text-left">お届け先</h5>
             <table class="table table-bordered">
                 <tbody>
@@ -37,14 +34,19 @@
             </table>
         </section><!-- ./addressee -->
         
-        <section class="goods-info col-6 d-flex">
-            <img src="{{ asset($item->image_url)}}" class="img-fluid">
-            <div class="goods-info-text">
-                <h6 class="goods-name">{{$item->goods_name}}</h6>
-                <p class="goods-code">商品コード：ABC{{$item->goods_id}}</p>
-                <div class="d-flex">
-                    <label class="goods-price-label mr-2">本体価格</label>
-                    <p class="goods-price">{{$item->price}}</p>
+        <section class="goods-info col-5">
+            <div>
+                <p>商品情報</p>
+            </div>
+            <div class="goods-info-wrap d-flex">
+                <img src="{{ asset($item->image_url)}}" class="img-fluid mr-3 w-25 h-auto border">
+                <div class="goods-info-text">
+                    <h6 class="goods-name h4 mb-3">{{$item->goods_name}}</h6>
+                    <p class="goods-code">商品コード：ABC{{$item->goods_id}}</p>
+                    <div class="goods-price-wrap d-flex h5">
+                        <label class="goods-price-label mr-2">本体価格</label>
+                        <p class="goods-price">{{$item->price}}</p>
+                    </div>
                 </div>
             </div>
         </section><!-- ./goods-info -->

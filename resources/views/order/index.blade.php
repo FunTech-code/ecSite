@@ -1,4 +1,3 @@
-@extends('common/layout')
 @extends('common/header') 
 @extends('common/footer') 
 @section('contents')

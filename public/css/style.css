@@ -43,3 +43,37 @@ a:hover{
     background-color: black;
     color: #ffffff;
 }
+
+/* 商品詳細画面 */
+.stock-info-wrap {
+    height: 40px;
+    background-color: #C4C4C4;
+}
+.stock-info {
+    font-size: 20px;
+}
+
+.goods-buy-btn-wrap .goods-buy-btn {
+    font-size: 20px;
+}
+
+/* 購入完了画面 */
+.bought-goods-page .bought-goods .addressee th{
+    width: 50%;
+    background-color: #C4C4C4;
+}
+
+/* ページネーション */
+.pagination {
+    
+}
+.page-item {
+    
+}
+/* パンくずリスト */
+.breadcrumb {
+    background-color: #FFFFFF;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    content: ">";  /* セパレータ */
+}

@@ -167,7 +167,7 @@
                 <div class="form-group row mb-0 mt-5 text-center">
                     <div class="col-md-6">
                         <button type="button" class="btn btn-light border border-dark w-25">
-                            {{ __('戻る') }}
+                            <a href="{{ route('home') }}">{{ __('戻る') }}</a>
                         </button>
                     </div>
                     <div class="col-md-6">

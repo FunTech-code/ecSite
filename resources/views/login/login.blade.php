@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-6 text-center">
             <div class="signin-form align-self-center w-75 mx-auto py-4 px-3">
-                <div class="sigin-heading">
+                <div class="signin-heading">
                     <h4>会員のお客様</h4>
                 </div>
                 <form action="{{ url('/user/show') }}" method="post">
