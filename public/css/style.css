@@ -45,15 +45,21 @@ a:hover{
 }
 
 /* 商品詳細画面 */
-.stock-info-wrap {
+
+.goods-detail-page .description-block .error {
+    color: red;
+    font-size: 0.75rem;
+    padding-left: 15px;
+}
+.goods-detail-page .stock-info-wrap {
     height: 40px;
     background-color: #C4C4C4;
 }
-.stock-info {
+.goods-detail-page .stock-info {
     font-size: 20px;
 }
 
-.goods-buy-btn-wrap .goods-buy-btn {
+.goods-detail-page .goods-buy-btn-wrap .goods-buy-btn {
     font-size: 20px;
 }
 

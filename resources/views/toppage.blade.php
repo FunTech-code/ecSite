@@ -15,11 +15,15 @@
                     <img class="img-fluid mx-auto d-block w-40 mh-100" src="{{ asset('img/nami.png')}}" alt="First slide">
                 </a>
             </div>
-            <div class="carousel-item" href="/goods/1">
-                <img class="img-fluid mx-auto d-block w-40 mh-100" src="{{ asset('img/luffy.png')}}" alt="Second slide">
+            <div class="carousel-item">
+                <a class="show-goods-2" href="/goods/1">
+                    <img class="img-fluid mx-auto d-block w-40 mh-100" src="{{ asset('img/luffy.png')}}" alt="Second slide">
+                </a>
             </div>
-            <div class="carousel-item" href="/goods/2">
-                <img class="img-fluid mx-auto d-block w-40 mh-100" src="{{ asset('img/zoro.png')}}" alt="Third slide">
+            <div class="carousel-item">
+                <a class="show-goods-3" href="/goods/2">
+                    <img class="img-fluid mx-auto d-block w-40 mh-100" src="{{ asset('img/zoro_bandana.png')}}" alt="Third slide">
+                </a>
             </div>
         </div>
         <a class="carousel-control-next bg-secondary" href="#carouselExampleControls" role="button" data-slide="next">

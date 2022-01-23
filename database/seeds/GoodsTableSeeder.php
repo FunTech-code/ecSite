@@ -17,6 +17,7 @@ class GoodsTableSeeder extends Seeder
         // データ挿入
         $param = [
             'goods_name' => 'ルフィ',
+            'item_code' => 'HB-001',
             'price' => '¥1,000',
             'image_url' => 'img/luffy.png',
             'stock' => 10,
@@ -28,6 +29,7 @@ class GoodsTableSeeder extends Seeder
 
         $param = [
             'goods_name' => 'ゾロ',
+            'item_code' => 'HB-002',
             'price' => '¥2,000',
             'image_url' => 'img/zoro_bandana.png',
             'stock' => 50,
@@ -39,6 +41,7 @@ class GoodsTableSeeder extends Seeder
 
         $param = [
             'goods_name' => 'ナミ',
+            'item_code' => 'HB-003',
             'price' => '¥3,000',
             'image_url' => 'img/nami.png',
             'stock' => 150,
@@ -50,6 +53,7 @@ class GoodsTableSeeder extends Seeder
 
         $param = [
             'goods_name' => 'ウソップ',
+            'item_code' => 'HB-004',
             'price' => '¥10,000',
             'image_url' => 'img/usopp_sogeking.png',
             'stock' => 300,
@@ -61,6 +65,7 @@ class GoodsTableSeeder extends Seeder
 
         $param = [
             'goods_name' => 'チョッパー',
+            'item_code' => 'HB-005',
             'price' => '¥5,000',
             'image_url' => 'img/chopper.png',
             'stock' => 90,
@@ -72,6 +77,7 @@ class GoodsTableSeeder extends Seeder
 
         $param = [
             'goods_name' => 'ブルック',
+            'item_code' => 'HB-006',
             'price' => '¥5,000',
             'image_url' => 'img/brook.png',
             'stock' => 100,
@@ -83,6 +89,7 @@ class GoodsTableSeeder extends Seeder
 
         $param = [
             'goods_name' => 'フランキー',
+            'item_code' => 'HB-007',
             'price' => '¥5,000',
             'image_url' => 'img/franky.png',
             'stock' => 100,
@@ -94,6 +101,7 @@ class GoodsTableSeeder extends Seeder
 
         $param = [
             'goods_name' => 'ジンベエ',
+            'item_code' => 'HB-008',
             'price' => '¥5,000',
             'image_url' => 'img/jinbe.png',
             'stock' => 100,
@@ -105,6 +113,7 @@ class GoodsTableSeeder extends Seeder
 
         $param = [
             'goods_name' => 'ロビン',
+            'item_code' => 'HB-009',
             'price' => '¥5,000',
             'image_url' => 'img/robin.png',
             'stock' => 100,

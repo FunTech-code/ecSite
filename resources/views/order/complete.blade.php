@@ -42,7 +42,7 @@
                 <img src="{{ asset($item->image_url)}}" class="img-fluid mr-3 w-25 h-auto border">
                 <div class="goods-info-text">
                     <h6 class="goods-name h4 mb-3">{{$item->goods_name}}</h6>
-                    <p class="goods-code">商品コード：ABC{{$item->goods_id}}</p>
+                    <p class="goods-code">商品コード：{{$item->item_code}}</p>
                     <div class="goods-price-wrap d-flex h5">
                         <label class="goods-price-label mr-2">本体価格</label>
                         <p class="goods-price">{{$item->price}}</p>

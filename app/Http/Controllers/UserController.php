@@ -26,10 +26,6 @@ class UserController extends Controller
             $msg = 'ログイン失敗';
         }
         return view('user.show',['msg' => $msg]);
-
-
-        // $username = DB::table('user')->where('user_id', $id)->value('user_name');
-        // return view('toppage',['user' => $username]);
     }
     
     
@@ -41,11 +37,6 @@ class UserController extends Controller
 
     public function postAuth(Request $request)
     {
-        // dump($request);
-        // dd($request->input('email'));
-        // dd($request->input('password'));
-        // $email = $request->input('email');
-        // $password = $request->input('password');
         $credentials = $request->only('email', 'password');
         dd(Auth::attempt($credentials));
         

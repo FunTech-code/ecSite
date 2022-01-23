@@ -67,7 +67,7 @@
                     </div>
 
                     <div class="col-md-6 d-flex align-items-center">
-                        <input id="tell" type="tel" class="form-control h-75 @error('tell') is-invalid @enderror" name="tell" value="{{ old('tell') }}" required autocomplete="tell">
+                        <input id="tell" type="text" maxlength="12" oninput="value = value.replace(/[^0-9]+/i,'');" class="form-control h-75 @error('tell') is-invalid @enderror" name="tell" value="{{ old('tell') }}" required autocomplete="tell">
                         @error('tell')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -82,7 +82,7 @@
                     </div>
 
                     <div class="col-md-6 d-flex align-items-center">
-                        <input id="postal_code" type="text" pattern="\d{3}-\d{4}" class="form-control h-75 @error('postal_code') is-invalid @enderror" name="postal_code" value="{{ old('postal_code') }}" required autocomplete="postal_code" autofocus>
+                        <input id="postal_code" type="text" pattern="\d{3}-\d{4}" maxlength="8" class="form-control h-75 @error('postal_code') is-invalid @enderror" name="postal_code" value="{{ old('postal_code') }}" required autocomplete="postal_code" autofocus>
                         @error('postal_code')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>

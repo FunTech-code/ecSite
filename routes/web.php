@@ -21,6 +21,6 @@ Route::post('order/{id}', 'OrderController@buy')->middleware('auth'); // 商品�
 Route::get('order/complete/{goods_id}', 'OrderController@complete')->middleware('auth'); // 購入完了
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
-Route::get('user',  'UserController@index')->middleware('auth');
-Route::get('user/{id}',  'UserController@show')->middleware('auth');
+// Route::get('user',  'UserController@index')->middleware('auth');
+// Route::get('user/{id}',  'UserController@show')->middleware('auth');
 // Route::get('logout',  'UserController@logout')->middleware('auth');

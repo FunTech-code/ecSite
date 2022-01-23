@@ -8,8 +8,6 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card bg-light-grey">
-                <!--<div class="card-header">{{ __('Login') }}</div>-->
-
                 <div class="card-body">
                     <div class="h4 text-center">{{ __('Registered User') }}</div>
                     <form method="POST" action="{{ route('login') }}">
