@@ -56,6 +56,12 @@
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "exclude-from-classmap": [
+            "vendor\\laravel\\ui\\auth-backend\\RegistersUsers.php"
+        ],
+        "files":[
+            "app\\Http\\Controllers\\RegistersUsers.php"
         ]
     }
 }
